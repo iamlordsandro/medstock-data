@@ -28,7 +28,7 @@ jobs:
         uses: ncipollo/release-action@v1
         with:
           tag: sqlite-latest
-          name: SQLite DB (latest) Release
+          name: SQLiteDB Release
           artifacts: aifa-medications/aifa-m.sqlite,aifa-medications/manifest.json
           allowUpdates: true
           replacesArtifacts: true
