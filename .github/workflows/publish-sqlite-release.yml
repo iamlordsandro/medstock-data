@@ -1,0 +1,34 @@
+name: Publish to GitHub Releases
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - aifa-medications/aifa-m.sqlite
+      - aifa-medications/manifest.json
+
+permissions:
+  contents: write
+
+concurrency:
+  group: publish-sqlite-release
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Publish SQLite to GitHub Releases
+        uses: ncipollo/release-action@v1
+        with:
+          tag: sqlite-latest
+          name: SQLite DB (latest) Release
+          artifacts: aifa-medications/aifa-m.sqlite,aifa-medications/manifest.json
+          allowUpdates: true
+          replacesArtifacts: true
+          makeLatest: true
