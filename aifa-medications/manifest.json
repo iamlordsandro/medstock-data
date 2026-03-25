@@ -1,7 +1,7 @@
 {
-  "version": "2026.03.24",
-  "sha256": "627eb7dcb7283e5550c01cac49b8708443b1825a7a931cd3bdf764e1a319009b",
+  "version": "2026.03.25",
+  "sha256": "a5b415af0168818736b8b4ee811743abc98fdd41e02cfe847ae39e6377efa7c6",
   "db_url": "https://github.com/iamlordsandro/medstock-data/releases/download/sqlite-latest/aifa-m.sqlite",
-  "size_bytes": 38416384,
-  "updated_at": "2026-03-24T00:11:27Z"
+  "size_bytes": 38551552,
+  "updated_at": "2026-03-25T00:13:27Z"
 }
